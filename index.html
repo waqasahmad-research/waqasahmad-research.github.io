@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dr. Waqas Ahmad | Mechanical Engineering & Sustainable Energy</title>
+
+  <meta name="description"
+        content="Academic website of Dr. Waqas Ahmad, Assistant Professor of Mechanical Engineering. Research in sustainable energy, thermochemical conversion, biochar, waste-to-energy and low-carbon technologies.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #e7ebf0;
+    }
+
+    .nav-container {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #123a63;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #0a6b75;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 90% 20%, rgba(19, 118, 126, 0.10), transparent 30%),
+        linear-gradient(135deg, #f7fafc 0%, #ffffff 55%, #edf7f6 100%);
+      border-bottom: 1px solid #edf0f3;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      align-items: center;
+      gap: 70px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #0a6b75;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 6vw, 5.4rem);
+      line-height: 1.02;
+      color: #102f4f;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero-title {
+      font-size: 1.35rem;
+      color: #3d5268;
+      margin-bottom: 10px;
+    }
+
+    .hero-affiliation {
+      color: #607083;
+      margin-bottom: 27px;
+    }
+
+    .hero-description {
+      max-width: 720px;
+      font-size: 1.07rem;
+      color: #4e6072;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #123a63;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0b2d4d;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #b9c6d1;
+      background: white;
+      color: #123a63;
+    }
+
+    .btn-secondary:hover {
+      border-color: #0a6b75;
+      color: #0a6b75;
+      transform: translateY(-2px);
+    }
+
+    .profile-placeholder {
+      width: 300px;
+      height: 370px;
+      border-radius: 18px;
+      background:
+        linear-gradient(145deg, #123a63, #0a6b75);
+      box-shadow: 0 25px 55px rgba(18, 58, 99, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 30px;
+      margin-left: auto;
+    }
+
+    .profile-placeholder span {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-light {
+      background: #f7f9fb;
+    }
+
+    .section-label {
+      color: #0a6b75;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      color: #123a63;
+      margin-bottom: 18px;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: #607083;
+      margin-bottom: 45px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 0.7fr;
+      gap: 70px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #475a6c;
+    }
+
+    .facts {
+      border-left: 3px solid #0a6b75;
+      padding-left: 28px;
+    }
+
+    .fact {
+      margin-bottom: 26px;
+    }
+
+    .fact strong {
+      display: block;
+      color: #123a63;
+      font-size: 1.05rem;
+    }
+
+    .fact span {
+      color: #6b7b8b;
+      font-size: 0.9rem;
+    }
+
+    /* CARDS */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border: 1px solid #e4e9ee;
+      border-radius: 10px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(30, 60, 80, 0.08);
+      border-color: #b8d7d8;
+    }
+
+    .card-number {
+      color: #0a6b75;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #163b5c;
+      margin-bottom: 12px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: #637486;
+      font-size: 0.93rem;
+    }
+
+    /* PROJECT */
+
+    .featured-project {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      background: #102f4f;
+      color: white;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .project-number {
+      padding: 55px;
+      background: linear-gradient(145deg, #0a6b75, #07555d);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-number .large {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .project-content {
+      padding: 55px;
+    }
+
+    .project-content h3 {
+      font-size: 1.65rem;
+      margin-bottom: 18px;
+    }
+
+    .project-content p {
+      color: #d6e1ea;
+    }
+
+    /* PUBLICATIONS */
+
+    .publication {
+      padding: 24px 0;
+      border-bottom: 1px solid #dde3e8;
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 25px;
+    }
+
+    .pub-year {
+      color: #0a6b75;
+      font-weight: 700;
+    }
+
+    .publication h3 {
+      font-size: 1.03rem;
+      color: #213d58;
+      margin-bottom: 5px;
+    }
+
+    .journal {
+      color: #708091;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    /* EXPERIENCE */
+
+    .timeline {
+      max-width: 900px;
+    }
+
+    .timeline-item {
+      border-left: 2px solid #d4dde4;
+      padding: 0 0 42px 30px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #0a6b75;
+      border-radius: 50%;
+      position: absolute;
+      left: -7px;
+      top: 7px;
+    }
+
+    .timeline-date {
+      color: #0a6b75;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .timeline-item h3 {
+      color: #123a63;
+      margin: 5px 0;
+    }
+
+    .timeline-item p {
+      color: #637486;
+    }
+
+    /* AWARDS */
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .award {
+      padding: 28px;
+      background: #f8fafb;
+      border-radius: 8px;
+      border-top: 3px solid #0a6b75;
+    }
+
+    .award h3 {
+      color: #123a63;
+      margin-bottom: 7px;
+    }
+
+    .award p {
+      color: #69798a;
+      font-size: 0.92rem;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #102f4f;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact .section-label {
+      color: #6fd0cc;
+    }
+
+    .contact p {
+      color: #cbd8e2;
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-link {
+      padding: 11px 17px;
+      border: 1px solid #587087;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .contact-link:hover {
+      border-color: #6fd0cc;
+      color: #6fd0cc;
+    }
+
+    footer {
+      background: #0a2339;
+      color: #9fb0c0;
+      padding: 24px 0;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .featured-project {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-placeholder {
+        margin: 20px 0 0;
+        width: 100%;
+        max-width: 320px;
+        height: 330px;
+      }
+
+      .research-grid,
+      .award-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .project-number,
+      .project-content {
+        padding: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-container">
+    <div class="logo">WAQAS AHMAD</div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<header class="hero">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow">Mechanical Engineering • Materials • Sustainable Energy</div>
+
+      <h1>Dr. Waqas<br>Ahmad</h1>
+
+      <div class="hero-title">
+        Assistant Professor of Mechanical Engineering
+      </div>
+
+      <div class="hero-affiliation">
+        Amity University Dubai • United Arab Emirates
+      </div>
+
+      <p class="hero-description">
+        Engineering academic and researcher working at the intersection of
+        sustainable energy, materials science, thermochemical conversion,
+        waste valorization, biochar and low-carbon technologies.
+      </p>
+
+      <div class="buttons">
+        <a href="#research" class="btn btn-primary">Explore Research</a>
+        <a href="#publications" class="btn btn-secondary">Publications</a>
+        <a href="#contact" class="btn btn-secondary">Contact</a>
+      </div>
+    </div>
+
+    <div class="profile-placeholder">
+      <span>
+        Professional portrait<br>
+        will be added here
+      </span>
+    </div>
+
+  </div>
+</header>
+
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-label">About</div>
+    <h2>Engineering research with a sustainability focus.</h2>
+
+    <div class="about-grid">
+
+      <div class="about-text">
+        <p>
+          I am an Assistant Professor of Mechanical Engineering at Amity
+          University Dubai with a PhD in Materials Science and Engineering
+          from the American University of Sharjah.
+        </p>
+
+        <p>
+          My research focuses on sustainable energy systems, thermochemical
+          conversion of solid wastes, waste-to-energy, biochar-based resource
+          recovery and low-carbon technologies. My work combines experimental
+          research, materials characterization and environmental assessment
+          to investigate practical pathways for resource recovery and
+          sustainable energy production.
+        </p>
+
+        <p>
+          Alongside research, I teach and mentor engineering students across
+          areas including thermodynamics, fluid mechanics, engineering
+          materials, basic mechanics, engineering graphics and workshop
+          practices.
+        </p>
+      </div>
+
+      <div class="facts">
+
+        <div class="fact">
+          <strong>PhD</strong>
+          <span>Materials Science & Engineering</span>
+        </div>
+
+        <div class="fact">
+          <strong>Research</strong>
+          <span>Sustainable Energy & Materials</span>
+        </div>
+
+        <div class="fact">
+          <strong>Location</strong>
+          <span>United Arab Emirates</span>
+        </div>
+
+        <div class="fact">
+          <strong>Academic + Applied</strong>
+          <span>Teaching, research & industry-linked projects</span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="research" class="section-light">
+  <div class="container">
+
+    <div class="section-label">Research</div>
+    <h2>Research Areas</h2>
+
+    <p class="section-intro">
+      My research combines mechanical engineering, materials science and
+      environmental engineering to address challenges in sustainable energy
+      conversion and resource recovery.
+    </p>
+
+    <div class="research-grid">
+
+      <div class="card">
+        <div class="card-number">01</div>
+        <h3>Thermochemical Conversion</h3>
+        <p>
+          Pyrolysis and thermal processing of biomass and solid wastes for
+          recovery of biochar, bio-oil and gaseous energy products.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">02</div>
+        <h3>Biochar & Resource Recovery</h3>
+        <p>
+          Engineering and characterization of biochar for sustainable waste
+          valorization, carbon management and soil-related applications.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">03</div>
+        <h3>Waste-to-Energy</h3>
+        <p>
+          Investigation of energy recovery pathways from municipal,
+          agricultural and other waste streams.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">04</div>
+        <h3>Hydrogen & Clean Energy</h3>
+        <p>
+          Research interests in hydrogen production, electrocatalysis,
+          biohydrogen and emerging low-carbon energy systems.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">05</div>
+        <h3>Materials Characterization</h3>
+        <p>
+          Experimental characterization using analytical techniques including
+          SEM/EDS, ICP-AES, GC-MS, FTIR, BET and thermal analysis.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-number">06</div>
+        <h3>Environmental Assessment</h3>
+        <p>
+          Assessment of heavy metals, organic contaminants and environmental
+          risks associated with materials and waste-derived products.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+
+    <div class="section-label">Industry-Linked Research</div>
+    <h2>From laboratory research to applied impact.</h2>
+
+    <div class="featured-project">
+
+      <div class="project-number">
+        <span class="large">1.6M+</span>
+        <span>AED industry-funded PhD project</span>
+      </div>
+
+      <div class="project-content">
+        <h3>Acidic Biochar Production for Soil Amendment & Waste Valorization</h3>
+
+        <p>
+          Industry-linked doctoral research conducted at the American
+          University of Sharjah with Emirates Global Aluminium. The work
+          involved thermochemical processing, biochar production, contaminant
+          assessment, materials characterization and evaluation of
+          waste-derived materials for beneficial reuse.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="publications" class="section-light">
+  <div class="container">
+
+    <div class="section-label">Scholarship</div>
+    <h2>Selected Publications</h2>
+
+    <p class="section-intro">
+      Selected peer-reviewed research spanning sustainable energy,
+      environmental materials, hydrogen, biochar and waste conversion.
+    </p>
+
+    <div class="publication">
+      <div class="pub-year">2025</div>
+      <div>
+        <h3>
+          Enhanced electrocatalytic hydrogen evolution with
+          CoNiFe(Cr/V) high-entropy alloy electrodes
+        </h3>
+        <div class="journal">APL Materials, 13, 051114</div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="pub-year">2024</div>
+      <div>
+        <h3>
+          Hydrogen production, storage, transportation and utilization
+          for the energy sector: A current status review
+        </h3>
+        <div class="journal">Journal of Energy Storage, Volume 101, Part A</div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="pub-year">2024</div>
+      <div>
+        <h3>
+          Co-pyrolysis of Date Palm Waste and Salicornia bigelovii:
+          Insights for bioenergy development in arid and semi-arid regions
+        </h3>
+        <div class="journal">ACS Omega, Volume 9, Issue 22</div>
+      </div>
+    </div>
+
+    <div class="publication">
+      <div class="pub-year">2022</div>
+      <div>
+        <h3>
+          Proximate and elemental analysis of solid recovered fuel and
+          comparison with fossil fuels: Physical characteristics and
+          economic benefits
+        </h3>
+        <div class="journal">Bioresource Technology Reports, Volume 18</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="experience">
+  <div class="container">
+
+    <div class="section-label">Career</div>
+    <h2>Academic & Research Experience</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">2026 – Present</div>
+        <h3>Assistant Professor, Mechanical Engineering</h3>
+        <p>Amity University Dubai, UAE</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2022 – 2026</div>
+        <h3>Teaching Assistant, Environmental Sciences</h3>
+        <p>American University of Sharjah, UAE</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2021 – 2026</div>
+        <h3>Research Assistant, Materials & Environmental Science</h3>
+        <p>American University of Sharjah, UAE</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2020</div>
+        <h3>Lecturer in Mechanical Engineering</h3>
+        <p>FAST-NUCES, Islamabad, Pakistan</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2018 – 2019</div>
+        <h3>Research Assistant, Waste-to-Energy & Biogas</h3>
+        <p>National University of Sciences & Technology, Pakistan</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="awards" class="section-light">
+  <div class="container">
+
+    <div class="section-label">Recognition</div>
+    <h2>Awards & Academic Recognition</h2>
+
+    <div class="award-grid">
+
+      <div class="award">
+        <h3>Green Food Innovation Award</h3>
+        <p>Gulfood Green Terra Award, Dubai • 2024</p>
+      </div>
+
+      <div class="award">
+        <h3>Full PhD Scholarship</h3>
+        <p>American University of Sharjah • 2021–2025</p>
+      </div>
+
+      <div class="award">
+        <h3>Merit Master's Scholarship</h3>
+        <p>National University of Sciences & Technology • 2017–2020</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-label">Contact</div>
+    <h2>Research, teaching & collaboration.</h2>
+
+    <p>
+      I welcome opportunities for academic collaboration, interdisciplinary
+      research, student supervision and engagement in sustainable engineering
+      and energy research.
+    </p>
+
+    <div class="contact-links">
+
+      <a class="contact-link"
+         href="mailto:waqasahmad000713@gmail.com">
+         Email
+      </a>
+
+      <a class="contact-link"
+         href="https://orcid.org/0000-0003-2160-3962"
+         target="_blank"
+         rel="noopener">
+         ORCID
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    © 2026 Dr. Waqas Ahmad • Mechanical Engineering • United Arab Emirates
+  </div>
+</footer>
+
+</body>
+</html>
