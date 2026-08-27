@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Research | Dr. Waqas Ahmad</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #334b60;
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1180px, 88%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: white;
+  border-bottom: 1px solid #e5eaee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #123a63;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #182536;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #08717a;
+}
+
+/* HERO */
+
+.research-hero {
+  padding: 100px 0 90px;
+  background: linear-gradient(120deg, #f8fbfc, #edf7f7);
+}
+
+.eyebrow {
+  color: #08717a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.research-hero h1 {
+  color: #123a63;
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.hero-text {
+  max-width: 820px;
+  font-size: 1.15rem;
+  color: #52687b;
+}
+
+/* GENERAL */
+
+section {
+  padding: 90px 0;
+}
+
+.section-light {
+  background: #f7f9fa;
+}
+
+.section-label {
+  color: #08717a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #123a63;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  max-width: 800px;
+  color: #637587;
+  margin-bottom: 45px;
+}
+
+/* PROJECTS */
+
+.projects {
+  display: grid;
+  gap: 28px;
+}
+
+.project-card {
+  border: 1px solid #e0e7eb;
+  border-radius: 14px;
+  background: white;
+  padding: 38px;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 25px;
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(25, 55, 75, 0.08);
+}
+
+.project-number {
+  color: #08717a;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.project-tag {
+  display: inline-block;
+  color: #08717a;
+  background: #eaf6f6;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  margin-bottom: 13px;
+}
+
+.project-card h3 {
+  color: #123a63;
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #637587;
+  margin-bottom: 15px;
+}
+
+.project-meta {
+  font-size: 0.87rem;
+  color: #445d70;
+  font-weight: 600;
+}
+
+.related {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid #e7ecef;
+}
+
+.related strong {
+  color: #123a63;
+}
+
+.related p {
+  margin-top: 7px;
+  font-size: 0.91rem;
+  margin-bottom: 0;
+}
+
+/* RESEARCH DIRECTIONS */
+
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.direction-card {
+  border: 1px solid #e1e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  background: white;
+}
+
+.direction-card h3 {
+  color: #123a63;
+  margin-bottom: 13px;
+  font-size: 1.2rem;
+}
+
+.direction-card p {
+  color: #637587;
+  font-size: 0.94rem;
+}
+
+/* CURRENT RESEARCH */
+
+.current-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.current-card {
+  background: #123a63;
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+}
+
+.current-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.current-card p {
+  color: #dce7ef;
+  font-size: 0.92rem;
+}
+
+/* CAPABILITIES */
+
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.capability {
+  border: 1px solid #ccd8de;
+  border-radius: 25px;
+  padding: 9px 17px;
+  color: #425d70;
+  font-size: 0.88rem;
+  background: white;
+}
+
+/* FOOTER */
+
+footer {
+  background: #102f4d;
+  color: #d8e2ea;
+  padding: 45px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+
+  .direction-grid,
+  .current-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-number {
+    font-size: 1.4rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+
+      <a href="index.html" class="logo">WAQAS AHMAD</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="index.html#teaching">Teaching</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="research-hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Research Portfolio
+    </div>
+
+    <h1>Research</h1>
+
+    <p class="hero-text">
+      My research integrates sustainable energy, thermochemical conversion,
+      waste valorization, biochar, hydrogen technologies, advanced materials
+      and environmental characterization. The work combines experimental
+      engineering with materials and environmental analysis to develop
+      practical pathways for resource recovery and low-carbon energy systems.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- SELECTED PROJECTS -->
+
+<section>
+  <div class="container">
+
+    <div class="section-label">Research Projects</div>
+
+    <h2>Selected Research Projects</h2>
+
+    <p class="section-intro">
+      Selected research programs spanning industry-funded biochar development,
+      thermochemical biomass conversion, municipal waste-to-energy and
+      anaerobic digestion.
+    </p>
+
+
+    <div class="projects">
+
+      <!-- EGA -->
+
+      <article class="project-card">
+
+        <div class="project-number">01</div>
+
+        <div>
+
+          <span class="project-tag">INDUSTRY-FUNDED RESEARCH</span>
+
+          <h3>
+            Acidic Biochar Production for Soil Amendment
+            &amp; Waste Valorization
+          </h3>
+
+          <p>
+            Industry-linked research focused on the production and
+            characterization of engineered acidic biochar through pyrolysis,
+            with emphasis on waste valorization and potential soil amendment
+            applications.
+          </p>
+
+          <p>
+            The work involved pyrolysis reactor operation, production and
+            characterization of biochar, bio-oil and gaseous products,
+            assessment of heavy metals and organic contaminants, and
+            physicochemical characterization of engineered biochar.
+          </p>
+
+          <div class="project-meta">
+            Industry Partner: Emirates Global Aluminium (EGA) |
+            Approx. Project Value: AED 1.6 million
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- SALICORNIA -->
+
+      <article class="project-card">
+
+        <div class="project-number">02</div>
+
+        <div>
+
+          <span class="project-tag">THERMOCHEMICAL CONVERSION</span>
+
+          <h3>
+            Salicornia &amp; Date Palm Co-Pyrolysis
+          </h3>
+
+          <p>
+            Experimental investigation of the co-pyrolysis of
+            <i>Salicornia bigelovii</i> and date palm biomass for integrated
+            bioenergy production and biochar development in arid and
+            semi-arid regions.
+          </p>
+
+          <p>
+            The research examines the influence of process temperature and
+            feedstock interaction on biochar, bio-oil and gaseous products,
+            together with energy recovery, carbon stability and environmental
+            safety of the resulting biochar.
+          </p>
+
+          <div class="related">
+
+            <strong>Selected publication</strong>
+
+            <p>
+              W. Ahmad et al., “Co-Pyrolysis of Date Palm Waste and
+              Salicornia Bigelovii: Insights for Bioenergy Development
+              in Arid and Semi-Arid Regions,”
+              <i>ACS Omega</i>, 2024.
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- USAID -->
+
+      <article class="project-card">
+
+        <div class="project-number">03</div>
+
+        <div>
+
+          <span class="project-tag">USAID-FUNDED RESEARCH</span>
+
+          <h3>
+            Anaerobic Digestion, Biogas Production
+            &amp; Methane Refinement
+          </h3>
+
+          <p>
+            Research involving the design, fabrication and operation of
+            semi-continuous stirred-tank reactors for anaerobic digestion
+            of poultry manure and renewable biogas production.
+          </p>
+
+          <p>
+            Experimental activities included reactor operation, controlled
+            feeding, biogas production and gas chromatographic analysis,
+            followed by investigation of methane refinement using gas
+            purification and scrubbing approaches.
+          </p>
+
+          <div class="project-meta">
+            Research Environment: NUST | Funding Context: USAID
+          </div>
+
+          <div class="related">
+
+            <strong>Related publication</strong>
+
+            <p>
+              “Methane refinement by iron oxide, packed-column water
+              scrubbing, and activated charcoal scrubbing techniques:
+              Process optimization.”
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- WASTE TO ENERGY -->
+
+      <article class="project-card">
+
+        <div class="project-number">04</div>
+
+        <div>
+
+          <span class="project-tag">WASTE-TO-ENERGY</span>
+
+          <h3>
+            Municipal Solid Waste-to-Energy
+            &amp; Solid Recovered Fuels
+          </h3>
+
+          <p>
+            Research focused on converting municipal and agricultural waste
+            streams into useful energy resources through solid recovered
+            fuels, refuse-derived fuels and biomass densification.
+          </p>
+
+          <p>
+            The work encompasses waste characterization, proximate and
+            elemental analysis, fuel-quality assessment, energy recovery,
+            economic feasibility and policy implications of sustainable
+            waste-to-energy systems.
+          </p>
+
+          <div class="related">
+
+            <strong>Research outputs include</strong>
+
+            <p>
+              Solid recovered fuel characterization, municipal solid
+              waste-to-energy assessment, biomass pelletization and
+              sustainable waste-management studies.
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- RESEARCH DIRECTIONS -->
+
+<section class="section-light">
+
+  <div class="container">
+
+    <div class="section-label">Research Directions</div>
+
+    <h2>Current Research Directions</h2>
+
+    <p class="section-intro">
+      These interconnected research directions extend my work in
+      thermochemical conversion and materials engineering toward emerging
+      low-carbon technologies and environmentally responsible engineering.
+    </p>
+
+
+    <div class="direction-grid">
+
+      <div class="direction-card">
+
+        <h3>Hydrogen &amp; Clean Energy</h3>
+
+        <p>
+          Hydrogen production, storage and utilization; electrocatalytic
+          hydrogen evolution; biohydrogen; electrolyzer and fuel-cell
+          technologies; and integrated low-carbon energy systems.
+        </p>
+
+      </div>
+
+
+      <div class="direction-card">
+
+        <h3>Advanced Materials &amp; Surface Engineering</h3>
+
+        <p>
+          High- and medium-entropy alloys, functional materials,
+          electrocatalytic materials, surface modification and
+          corrosion-resistant engineering systems.
+        </p>
+
+      </div>
+
+
+      <div class="direction-card">
+
+        <h3>Environmental &amp; Toxicological Assessment</h3>
+
+        <p>
+          Heavy metals, PAHs, persistent organic contaminants,
+          environmental risk assessment and evaluation of the safety
+          and reuse potential of engineered materials and biochar.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- EMERGING RESEARCH -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-label">Emerging Research</div>
+
+    <h2>Hydrogen &amp; Integrated Energy Systems</h2>
+
+    <p class="section-intro">
+      Current research development extends the waste-to-energy and materials
+      portfolio toward integrated hydrogen production, utilization and
+      resource-recovery systems.
+    </p>
+
+
+    <div class="current-grid">
+
+      <div class="current-card">
+        <h3>Waste-to-Hydrogen &amp; Biochar</h3>
+        <p>
+          Integrated conversion concepts coupling waste utilization,
+          hydrogen generation and carbon-rich biochar production.
+        </p>
+      </div>
+
+
+      <div class="current-card">
+        <h3>Green Hydrogen from Desalination Brine</h3>
+        <p>
+          Investigation of resource-efficient hydrogen-production pathways
+          relevant to water-energy systems in arid regions.
+        </p>
+      </div>
+
+
+      <div class="current-card">
+        <h3>Electrolyzer &amp; Fuel-Cell Systems</h3>
+        <p>
+          Experimental evaluation of hydrogen generation, fuel-cell
+          performance, system integration and engineering safety.
+        </p>
+      </div>
+
+
+      <div class="current-card">
+        <h3>Hydrogen-Based Hybrid Energy Systems</h3>
+        <p>
+          Exploration of hydrogen integration with conventional and
+          renewable energy technologies for lower-carbon energy and
+          transportation applications.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CAPABILITIES -->
+
+<section class="section-light">
+
+  <div class="container">
+
+    <div class="section-label">Experimental Research</div>
+
+    <h2>Experimental &amp; Analytical Capabilities</h2>
+
+    <p class="section-intro">
+      Research experience spans reactor-scale experimentation,
+      thermochemical conversion, materials characterization and
+      environmental analysis.
+    </p>
+
+
+    <div class="capabilities">
+
+      <span class="capability">Pyrolysis Reactors</span>
+      <span class="capability">Anaerobic Digestion</span>
+      <span class="capability">SEM / EDS</span>
+      <span class="capability">ICP-AES</span>
+      <span class="capability">AAS</span>
+      <span class="capability">GC-MS</span>
+      <span class="capability">Gas Chromatography</span>
+      <span class="capability">FTIR</span>
+      <span class="capability">BET Surface Analysis</span>
+      <span class="capability">TGA</span>
+      <span class="capability">Zeta Potential</span>
+      <span class="capability">Heavy Metal Analysis</span>
+      <span class="capability">PAH Analysis</span>
+      <span class="capability">Environmental Risk Assessment</span>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer>
+
+  <div class="container footer-content">
+
+    <div>
+      <strong>Dr. Waqas Ahmad</strong><br>
+      Mechanical Engineering • Sustainable Energy • Materials
+    </div>
+
+    <div>
+      <a href="index.html">Home</a>
+      &nbsp; | &nbsp;
+      <a href="index.html#contact">Contact</a>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
