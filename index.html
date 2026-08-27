@@ -165,26 +165,26 @@
       transform: translateY(-2px);
     }
 
-    .profile-placeholder {
-      width: 300px;
-      height: 370px;
-      border-radius: 18px;
-      background:
-        linear-gradient(145deg, #123a63, #0a6b75);
-      box-shadow: 0 25px 55px rgba(18, 58, 99, 0.18);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 30px;
-      margin-left: auto;
-    }
+   .profile-photo {
+  width: 320px;
+  height: 400px;
+  margin-left: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  border: 6px solid white;
+  box-shadow: 0 25px 55px rgba(18, 58, 99, 0.18);
+}
 
-    .profile-placeholder span {
-      opacity: 0.8;
-      font-size: 0.9rem;
-    }
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+} 
+
+   
 
     /* GENERAL */
 
@@ -559,12 +559,10 @@
       </div>
     </div>
 
-    <div class="profile-placeholder">
-      <span>
-        Professional portrait<br>
-        will be added here
-      </span>
-    </div>
+    <div class="profile-photo">
+  <img src="waqas ahmad copy.jpg"
+       alt="Dr. Waqas Ahmad">
+</div>
 
   </div>
 </header>
