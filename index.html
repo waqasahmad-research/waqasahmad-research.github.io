@@ -341,7 +341,7 @@
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
@@ -556,9 +556,23 @@
     /* MOBILE */
 
     @media (max-width: 850px) {
-      .nav-links {
-        display: none;
-      }
+.nav-container {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 0.82rem;
+}
+
+.logo {
+  font-size: 1.05rem;
+}
 
       .hero-grid,
       .about-grid,
@@ -566,12 +580,11 @@
         grid-template-columns: 1fr;
       }
 
-      .profile-placeholder {
-        margin: 20px 0 0;
-        width: 100%;
-        max-width: 320px;
-        height: 330px;
-      }
+      .profile-photo {
+  margin: 25px auto 0;
+  width: min(100%, 300px);
+  height: 375px;
+}
 
     .research-grid,
 .award-grid,
