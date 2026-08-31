@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Publications | Dr. Waqas Ahmad</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #334b60;
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1180px, 88%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: white;
+  border-bottom: 1px solid #e5eaee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #123a63;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #182536;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #08717a;
+}
+
+/* HERO */
+
+.hero {
+  padding: 95px 0 85px;
+  background: linear-gradient(120deg, #f8fbfc, #edf7f7);
+}
+
+.eyebrow {
+  color: #08717a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  color: #123a63;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  max-width: 820px;
+  color: #52687b;
+  font-size: 1.12rem;
+}
+
+/* PROFILE LINKS */
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.profile-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #b8c8d2;
+  border-radius: 7px;
+  color: #123a63;
+  background: white;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.profile-link:hover {
+  border-color: #08717a;
+  color: #08717a;
+}
+
+/* PUBLICATIONS */
+
+section {
+  padding: 80px 0;
+}
+
+.section-label {
+  color: #08717a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: #123a63;
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+}
+
+.intro {
+  color: #637587;
+  max-width: 780px;
+  margin-bottom: 50px;
+}
+
+.year-heading {
+  color: #123a63;
+  font-size: 1.7rem;
+  margin: 55px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e5ecef;
+}
+
+.year-heading:first-of-type {
+  margin-top: 0;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 22px;
+  padding: 28px 0;
+  border-bottom: 1px solid #e6ebee;
+}
+
+.pub-number {
+  color: #08717a;
+  font-size: 0.92rem;
+  font-weight: 800;
+  padding-top: 3px;
+}
+
+.pub-title {
+  color: #123a63;
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.authors {
+  color: #52687b;
+  font-size: 0.91rem;
+  margin-bottom: 5px;
+}
+
+.me {
+  color: #123a63;
+  font-weight: 800;
+}
+
+.journal {
+  color: #687b8b;
+  font-size: 0.91rem;
+  margin-bottom: 13px;
+}
+
+.journal strong {
+  color: #425c70;
+}
+
+.article-link {
+  display: inline-block;
+  color: #08717a;
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 800;
+  border-bottom: 1px solid #87b7b9;
+}
+
+.article-link:hover {
+  color: #123a63;
+}
+
+/* NOTE */
+
+.note {
+  margin-top: 50px;
+  padding: 22px 25px;
+  background: #f5f8f9;
+  border-left: 4px solid #08717a;
+  color: #637587;
+  font-size: 0.88rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: #102f4d;
+  color: #d8e2ea;
+  padding: 45px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.8rem;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="index.html" class="logo">WAQAS AHMAD</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="research.html">Research</a></li>
+
+<li><a href="index.html#teaching">Teaching</a></li>
+
+<li><a href="publications.html" class="active">Publications</a></li>
+
+<li><a href="index.html#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+Research Outputs
+</div>
+
+<h1>Publications</h1>
+
+<p>
+Peer-reviewed research spanning biochar and thermochemical conversion,
+hydrogen and clean energy, waste-to-energy, advanced materials,
+environmental contaminants and resource recovery.
+</p>
+
+
+<div class="profile-links">
+
+<a
+class="profile-link"
+href="https://www.researchgate.net/profile/Waqas-Ahmad-49"
+target="_blank">
+ResearchGate
+</a>
+
+<a
+class="profile-link"
+href="https://orcid.org/0000-0003-2160-3962"
+target="_blank">
+ORCID
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JOURNAL PUBLICATIONS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+Peer-Reviewed Research
+</div>
+
+<h2>Journal Publications</h2>
+
+<p class="intro">
+Selected peer-reviewed journal publications are presented in
+reverse chronological order. Article titles link directly to
+publisher or DOI records where available.
+</p>
+
+
+<!-- 2026 -->
+
+<h3 class="year-heading">2026</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">01</div>
+
+<div>
+
+<div class="pub-title">
+Toxicity and contaminant profiles of biochar from co-pyrolyzed
+Salicornia and date palm biomass
+</div>
+
+<div class="authors">
+<span class="me">Waqas Ahmad</span>, Yassir Makkawi, Fatin Samara
+</div>
+
+<div class="journal">
+<strong>Environmental Challenges</strong>,
+Volume 24, 101536
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.1016/j.envc.2026.101536"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">02</div>
+
+<div>
+
+<div class="pub-title">
+Toxicological assessment of hawksbill sea turtle eggs from the Arabian Gulf
+</div>
+
+<div class="authors">
+Fatin Samara, Fadi Yaghmour, Ishraq Osman,
+<span class="me">Waqas Ahmad</span>,
+Areej Mohammed, Clara Jimena Rodriguez-Zarate,
+Brendan J. Godley
+</div>
+
+<div class="journal">
+<strong>Marine Pollution Bulletin</strong>,
+Volume 222, Part 1, 118625
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.1016/j.marpolbul.2025.118625"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 2025 -->
+
+<h3 class="year-heading">2025</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">03</div>
+
+<div>
+
+<div class="pub-title">
+Enhanced electrocatalytic hydrogen evolution with
+CoNiFe(Cr/V) high-entropy alloy electrodes
+</div>
+
+<div class="journal">
+<strong>APL Materials</strong>,
+Volume 13, 051114
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2024 -->
+
+<h3 class="year-heading">2024</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">04</div>
+
+<div>
+
+<div class="pub-title">
+Hydrogen production, storage, transportation and utilization
+for energy sector: A current status review
+</div>
+
+<div class="journal">
+<strong>Journal of Energy Storage</strong>,
+Volume 101, Part A, 113733
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.1016/j.est.2024.113733"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">05</div>
+
+<div>
+
+<div class="pub-title">
+Levels of polycyclic aromatic hydrocarbons and organochlorine
+pesticides in sea snakes (Elapidae: Hydrophiinae) from
+Sharjah, United Arab Emirates
+</div>
+
+<div class="authors">
+Fadi Yaghmour, Fatin Samara, Meera Al Hammadi,
+<span class="me">Waqas Ahmad</span>, et al.
+</div>
+
+<div class="journal">
+<strong>Marine Pollution Bulletin</strong>,
+Volume 206, 116666
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.1016/j.marpolbul.2024.116666"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">06</div>
+
+<div>
+
+<div class="pub-title">
+Co-Pyrolysis of Date Palm Waste and Salicornia Bigelovii:
+Insights for Bioenergy Development in Arid and Semi-Arid Regions
+</div>
+
+<div class="authors">
+<span class="me">Waqas Ahmad</span> et al.
+</div>
+
+<div class="journal">
+<strong>ACS Omega</strong>,
+Volume 9, Issue 22, 24082–24094
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.1021/acsomega.4c02972"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 2023 -->
+
+<h3 class="year-heading">2023</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">07</div>
+
+<div>
+
+<div class="pub-title">
+Biohydrogen Production from Waste Materials: Mini-review
+</div>
+
+<div class="authors">
+<span class="me">Waqas Ahmad</span>, Fatin Samara
+</div>
+
+<div class="journal">
+<strong>Trends in Ecological and Indoor Environmental Engineering</strong>,
+1(1), 16–23
+</div>
+
+<a
+class="article-link"
+href="https://doi.org/10.62622/TEIEE.023.1.1.16-23"
+target="_blank">
+View Article ↗
+</a>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">08</div>
+
+<div>
+
+<div class="pub-title">
+Applicability of titanium-based catalysts in the photocatalytic
+degradation of 2,3,7,8-tetrachlorodibenzofuran
+</div>
+
+<div class="journal">
+<strong>Molecules</strong>,
+28(22), 7488
+</div>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">09</div>
+
+<div>
+
+<div class="pub-title">
+Socio-economic benefits and policy implications of generating
+sustainable energy from municipal solid waste in Pakistan
+</div>
+
+<div class="journal">
+<strong>Journal of Energy and Climate Change</strong>,
+Volume 5
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2022 -->
+
+<h3 class="year-heading">2022</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">10</div>
+
+<div>
+
+<div class="pub-title">
+Proximate and elemental analysis of solid recovered fuel and
+comparison with fossil fuels: Physical characteristics and
+economic benefits
+</div>
+
+<div class="journal">
+<strong>Bioresource Technology Reports</strong>,
+Volume 18
+</div>
+
+</div>
+
+</div>
+
+
+<div class="publication">
+
+<div class="pub-number">11</div>
+
+<div>
+
+<div class="pub-title">
+Enhancement of the corrosion resistance of mild steel with
+femtosecond laser nanostructuring and CrCoNi medium-entropy
+alloy coating
+</div>
+
+<div class="journal">
+<strong>Applied Surface Science Advances</strong>,
+Volume 12
+</div>
+
+</div>
+
+</div>
+
+
+<!-- 2021 -->
+
+<h3 class="year-heading">2021</h3>
+
+
+<div class="publication">
+
+<div class="pub-number">12</div>
+
+<div>
+
+<div class="pub-title">
+Methane refinement and enhancement using iron oxide,
+packed-column water scrubbing, and activated charcoal
+scrubbing techniques: Process optimization
+</div>
+
+<div class="journal">
+<strong>Waste and Biomass Valorization</strong>,
+Volume 13, 2295–2307
+</div>
+
+</div>
+
+</div>
+
+
+<div class="note">
+
+This page presents peer-reviewed journal research.
+Conference presentations and other scholarly outputs are maintained
+separately from the journal publication record.
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+<strong>Dr. Waqas Ahmad</strong><br>
+Mechanical Engineering • Sustainable Energy • Materials
+</div>
+
+<div>
+<a href="index.html">Home</a>
+&nbsp; | &nbsp;
+<a href="research.html">Research</a>
+&nbsp; | &nbsp;
+<a href="index.html#contact">Contact</a>
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
