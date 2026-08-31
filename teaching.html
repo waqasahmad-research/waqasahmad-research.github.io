@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teaching | Dr. Waqas Ahmad</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #334b60;
+  line-height: 1.7;
+  background: #ffffff;
+}
+
+.container {
+  width: min(1180px, 88%);
+  margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5eaee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #123a63;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #182536;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #08717a;
+}
+
+
+/* HERO */
+
+.hero {
+  padding: 95px 0 85px;
+  background: linear-gradient(120deg, #f8fbfc, #edf7f7);
+}
+
+.eyebrow {
+  color: #08717a;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  color: #123a63;
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  max-width: 850px;
+  color: #52687b;
+  font-size: 1.12rem;
+}
+
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 80px 0;
+}
+
+.section-label {
+  color: #08717a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+h2 {
+  color: #123a63;
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  color: #637587;
+  max-width: 820px;
+  margin-bottom: 42px;
+}
+
+
+/* TEACHING PHILOSOPHY */
+
+.philosophy {
+  display: grid;
+  grid-template-columns: 0.8fr 2fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.philosophy-title {
+  color: #123a63;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+.philosophy-text p {
+  margin-bottom: 18px;
+  color: #53697a;
+}
+
+
+/* COURSES */
+
+.light-section {
+  background: #f7f9fa;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.course-card {
+  background: #ffffff;
+  border: 1px solid #e1e7eb;
+  border-radius: 12px;
+  padding: 25px;
+  transition: 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  border-color: #9ebfc2;
+}
+
+.course-type {
+  color: #08717a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.course-card h3 {
+  color: #123a63;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.course-card p {
+  color: #6a7c8b;
+  font-size: 0.86rem;
+}
+
+
+/* LABORATORY TEACHING */
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lab-card {
+  border-left: 4px solid #08717a;
+  background: #f7fafb;
+  padding: 24px 26px;
+}
+
+.lab-card h3 {
+  color: #123a63;
+  margin-bottom: 7px;
+  font-size: 1.05rem;
+}
+
+.lab-card p {
+  color: #637587;
+  font-size: 0.9rem;
+}
+
+
+/* TEACHING APPROACH */
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.approach-card {
+  border-top: 3px solid #08717a;
+  padding: 25px 22px;
+  background: #ffffff;
+  border-left: 1px solid #e4e9ec;
+  border-right: 1px solid #e4e9ec;
+  border-bottom: 1px solid #e4e9ec;
+}
+
+.approach-number {
+  color: #9baab4;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.approach-card h3 {
+  color: #123a63;
+  font-size: 1.02rem;
+  margin-bottom: 8px;
+}
+
+.approach-card p {
+  color: #637587;
+  font-size: 0.87rem;
+}
+
+
+/* SUPERVISION */
+
+.supervision-box {
+  background: #123a63;
+  color: white;
+  border-radius: 14px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.supervision-box h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.supervision-box p {
+  color: #d6e1e8;
+}
+
+.supervision-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.stat {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.stat-label {
+  color: #cbd9e1;
+  font-size: 0.83rem;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: #102f4d;
+  color: #d8e2ea;
+  padding: 45px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .course-grid,
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .philosophy,
+  .supervision-box {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .nav-links {
+    gap: 10px;
+    font-size: 0.78rem;
+  }
+
+  .course-grid,
+  .lab-grid,
+  .approach-grid,
+  .supervision-stats {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container">
+
+<nav>
+
+<a href="index.html" class="logo">WAQAS AHMAD</a>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="research.html">Research</a></li>
+
+<li><a href="teaching.html" class="active">Teaching</a></li>
+
+<li><a href="publications.html">Publications</a></li>
+
+<li><a href="index.html#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="eyebrow">
+Engineering Education
+</div>
+
+<h1>Teaching & Mentoring</h1>
+
+<p>
+My teaching focuses on building strong engineering fundamentals while
+connecting theory with physical understanding, experimentation and
+real-world engineering applications. I aim to develop students who can
+move confidently from fundamental principles to analysis, design,
+laboratory investigation and engineering problem-solving.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TEACHING PHILOSOPHY -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+Teaching Philosophy
+</div>
+
+<div class="philosophy">
+
+<div>
+
+<h2 class="philosophy-title">
+From engineering fundamentals to practical problem-solving.
+</h2>
+
+</div>
+
+<div class="philosophy-text">
+
+<p>
+I view engineering education as a combination of conceptual
+understanding, analytical reasoning and practical application.
+Students should understand not only how to apply an equation, but
+also the physical principles behind it and the engineering decisions
+that follow from the result.
+</p>
+
+<p>
+My teaching therefore integrates theory, numerical problem-solving,
+laboratory experimentation, engineering examples and project-based
+activities. Wherever possible, I connect classroom concepts with
+energy systems, mechanical processes, materials and real engineering
+applications.
+</p>
+
+<p>
+Assessment and feedback are used not simply to measure performance,
+but to identify areas where students need further development and to
+support continuous improvement in learning.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section class="light-section">
+
+<div class="container">
+
+<div class="section-label">
+Courses
+</div>
+
+<h2>Courses Taught</h2>
+
+<p class="section-intro">
+Teaching experience across fundamental and applied areas of
+mechanical engineering, supported by laboratory instruction,
+engineering analysis and practical problem-solving.
+</p>
+
+
+<div class="course-grid">
+
+
+<div class="course-card">
+
+<div class="course-type">Thermal Sciences</div>
+
+<h3>Thermodynamics</h3>
+
+<p>
+Energy, thermodynamic properties, energy conversion and
+engineering thermodynamic systems.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Fluid Sciences</div>
+
+<h3>Fluid Mechanics</h3>
+
+<p>
+Fluid statics, fluid motion, conservation principles,
+internal flow and engineering applications.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Materials</div>
+
+<h3>Engineering Materials</h3>
+
+<p>
+Engineering material properties, structures, processing,
+selection and performance.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Mechanics</div>
+
+<h3>Basic Mechanics</h3>
+
+<p>
+Fundamental mechanics, forces, equilibrium, friction,
+centroids and engineering applications.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Mechanics</div>
+
+<h3>Engineering Mechanics</h3>
+
+<p>
+Engineering analysis of forces, structures, motion and
+mechanical systems.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Design & Manufacturing</div>
+
+<h3>Engineering Graphics & Workshop Practices</h3>
+
+<p>
+Engineering drawing, graphical communication, workshop
+processes and practical manufacturing skills.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Energy Systems</div>
+
+<h3>Internal Combustion Engines</h3>
+
+<p>
+Fundamentals and engineering analysis of internal combustion
+engine systems and performance.
+</p>
+
+</div>
+
+
+<div class="course-card">
+
+<div class="course-type">Mechanical Engineering</div>
+
+<h3>Basic Mechanical Engineering</h3>
+
+<p>
+Undergraduate mechanical engineering fundamentals taught at
+FAST-NUCES, Islamabad, Pakistan.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LABORATORY TEACHING -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+Experimental Education
+</div>
+
+<h2>Laboratory Teaching</h2>
+
+<p class="section-intro">
+Laboratory instruction is an important part of my teaching approach,
+allowing students to connect theoretical concepts with measurement,
+experimentation, data interpretation and engineering observations.
+</p>
+
+
+<div class="lab-grid">
+
+
+<div class="lab-card">
+
+<h3>Fluid Mechanics Laboratory</h3>
+
+<p>
+Experimental investigation of fluid-flow principles,
+measurements, losses and engineering fluid systems.
+</p>
+
+</div>
+
+
+<div class="lab-card">
+
+<h3>Basic Mechanics Laboratory</h3>
+
+<p>
+Practical investigation of equilibrium, forces, moments
+and fundamental mechanics principles.
+</p>
+
+</div>
+
+
+<div class="lab-card">
+
+<h3>Engineering Mechanics Laboratory</h3>
+
+<p>
+Hands-on learning supporting mechanics concepts,
+experimental observations and engineering analysis.
+</p>
+
+</div>
+
+
+<div class="lab-card">
+
+<h3>Workshop Practices Laboratory</h3>
+
+<p>
+Practical exposure to workshop processes, manufacturing
+operations and engineering fabrication.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TEACHING APPROACH -->
+
+<section class="light-section">
+
+<div class="container">
+
+<div class="section-label">
+Learning Approach
+</div>
+
+<h2>How I Approach Engineering Education</h2>
+
+
+<div class="approach-grid">
+
+
+<div class="approach-card">
+
+<div class="approach-number">01</div>
+
+<h3>Conceptual Understanding</h3>
+
+<p>
+Building a strong understanding of the physical principles
+behind engineering equations and models.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">02</div>
+
+<h3>Engineering Problem-Solving</h3>
+
+<p>
+Developing systematic approaches to analysis, calculations
+and engineering decision-making.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">03</div>
+
+<h3>Laboratory Learning</h3>
+
+<p>
+Connecting theoretical knowledge with experiments,
+measurement, observations and data interpretation.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">04</div>
+
+<h3>Project-Based Learning</h3>
+
+<p>
+Using engineering projects and applied activities to
+encourage independent thinking and practical application.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">05</div>
+
+<h3>Outcome-Based Assessment</h3>
+
+<p>
+Aligning learning activities and assessments with course
+learning outcomes and using results to support improvement.
+</p>
+
+</div>
+
+
+<div class="approach-card">
+
+<div class="approach-number">06</div>
+
+<h3>Research-Informed Teaching</h3>
+
+<p>
+Connecting engineering education with contemporary challenges
+in energy, sustainability, materials and environmental engineering.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUPERVISION -->
+
+<section>
+
+<div class="container">
+
+<div class="supervision-box">
+
+<div>
+
+<div class="section-label" style="color:#9dd8d6;">
+Student Development
+</div>
+
+<h2>Supervision & Mentoring</h2>
+
+<p>
+Alongside classroom and laboratory teaching, I have supported
+undergraduate and postgraduate students in experimental research,
+data interpretation, scientific writing, project development and
+thesis preparation.
+</p>
+
+</div>
+
+
+<div class="supervision-stats">
+
+<div class="stat">
+
+<div class="stat-number">2</div>
+
+<div class="stat-label">
+MSc Projects Co-Supervised
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">6</div>
+
+<div class="stat-label">
+BSc Environmental Projects Supervised / Co-Supervised
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+
+<strong>Dr. Waqas Ahmad</strong><br>
+
+Mechanical Engineering • Sustainable Energy • Materials
+
+</div>
+
+<div>
+
+<a href="index.html">Home</a>
+&nbsp; | &nbsp;
+
+<a href="research.html">Research</a>
+&nbsp; | &nbsp;
+
+<a href="publications.html">Publications</a>
+&nbsp; | &nbsp;
+
+<a href="index.html#contact">Contact</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
